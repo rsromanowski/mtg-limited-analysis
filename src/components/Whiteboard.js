@@ -5,7 +5,7 @@ export class Whiteboard extends Component {
     render() {
         return (
             <div className="whiteboard">
-                Whiteboard
+                <h3>Whiteboard</h3>
                 <ColumnContainer {...this.props}/>
             </div>
         )
