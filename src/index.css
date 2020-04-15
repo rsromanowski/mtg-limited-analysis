@@ -1,4 +1,16 @@
+html{
+  background-color: black;
+  margin: 0;
+  padding: 0;
+}
+
+html, #root, .App {
+  height: 100%;
+}
+
 body {
+  background-color: grey;
+  min-height: 100%;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -10,4 +22,48 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.App {
+  height: 100%;
+  width:100%;
+  display: flex;
+}
+.workspace {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: purple;
+}
+.sidebar {
+  padding: 4px;
+  background-color: lightgreen;
+  display: flex;
+  flex-direction: column;
+}
+.bench {
+  padding: 4px;
+  background-color: lightyellow;
+  min-height: 250px;
+}
+
+.whiteboard {
+  padding: 4px;
+  flex-grow: 1;
+  background-color: white;
+}
+
+.column-container {
+  display: flex;
+}
+.column {
+  background-color: lightgray;
+  margin: 4px;
+  border-radius: 2px;
+  text-align: center;
+  width: 146px; /* size of small scryfall images */
+  padding-bottom: 180px; /* equals the margin-bottom on the .column img */
+}
+.column img {
+  margin-bottom: -180px; /* equals the padding-bottom on the .column */
 }
