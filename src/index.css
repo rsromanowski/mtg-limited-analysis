@@ -1,22 +1,20 @@
 html{
-  background-color: black;
+  height: 100%;
   margin: 0;
   padding: 0;
 }
 
-html, #root, .App {
-  height: 100%;
-}
-
 body {
-  background-color: grey;
-  min-height: 100%;
+  height: 100%;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  display: flex;
+  flex-direction: column;
 }
 
 code {
@@ -24,47 +22,113 @@ code {
     monospace;
 }
 
+nav {
+  flex-shrink: 0;
+}
+footer {
+  flex-shrink: 0;
+}
+#root {
+  flex-grow: 1;
+}
 .App {
   height: 100%;
-  width:100%;
   display: flex;
+}
+.sidebar {
+  padding: 4px;
+  margin: 4px;
+  border: solid 1px lightgrey;
+  background: white;
+  display: flex;
+  flex-direction: column;
 }
 .workspace {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  background-color: purple;
-}
-.sidebar {
-  padding: 4px;
-  background-color: lightgreen;
-  display: flex;
-  flex-direction: column;
 }
 .bench {
   padding: 4px;
-  background-color: lightyellow;
-  min-height: 250px;
+  margin: 4px;
+  border: solid 1px lightgrey;
+  background: white;
 }
-
 .whiteboard {
   padding: 4px;
+  margin: 4px;
   flex-grow: 1;
-  background-color: white;
+  border: solid 1px lightgrey;
+  background: white;
+}
+.shadow-container {
+  box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
 }
 
 .column-container {
   display: flex;
   height: 100%;
 }
-.column {
-  background-color: lightgray;
+
+.h-container {
+  display: flex;
+  margin-bottom: 12px;
+}
+
+/* Sidebar */ 
+.checkboxes {
+  flex-grow: 1;
+}
+.button-load {
+  font-weight: bolder;
+}
+
+/* Bench */
+.actionBar {
+  margin-bottom: 4px;
+}
+.mtg-row-container {
+  overflow: auto;
+  white-space: nowrap;
+  min-height: 204px;
+}
+.mtg-row-container > img {
+  margin-right: 2px;
+}
+
+/* Whiteboard */
+.titleBar {
+  margin: 4px;
+}
+.whiteboard {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff9ff;
+}
+.mtg-column-container {
+  display: grid;
+   grid-auto-columns: 1fr;
+   grid-auto-flow: column;
+  flex-grow: 1;
+}
+.mtg-column {
+  flex-grow: 1;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
   margin: 4px;
   border-radius: 2px;
-  text-align: center;
-  width: 146px; /* size of small scryfall images */
-  padding-bottom: 180px; /* equals the margin-bottom on the .column img */
+  box-shadow: 0 1px 2px 0 hsla(0, 0%, 0%, 0.2);
+  height: auto;
+  /*padding-bottom: 180px; /* equals the margin-bottom on the .column img */
 }
-.column img {
+.mtg-column img {
   margin-bottom: -180px; /* equals the padding-bottom on the .column */
+}
+.mtg-cards {
+  flex-grow: 1;
+}
+.mtg-card {
+  border-radius: 2%;
 }

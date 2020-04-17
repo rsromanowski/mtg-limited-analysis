@@ -6,12 +6,12 @@ export class Card extends Component {
         return (
             <Draggable draggableId={this.props.card.id} index={this.props.index}>
                 {(provided) => (
-                    this.props.card.image_uris ? <img 
+                   this.props.card.image_uris ? <img className="mtg-card"
                         {...provided.draggableProps}
                         {...provided.dragHandleProps}
                         ref={provided.innerRef}
                         alt={this.props.card.id} src={this.props.card.image_uris.small}
-                    /> : <div>loading...</div>
+                    /> : ''
                 )}
             </Draggable>
         )

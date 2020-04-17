@@ -4,7 +4,7 @@ import Column from './Column'
 export class ColumnContainer extends Component {
 
     render() {
-        return <div className="column-container">
+        return <div className="mtg-column-container">
             {this.props.columnOrder.map((columnId, index) => {
                 const column = this.props.columns[columnId];
                 const cards = column.cardIds.map((cardId) => (this.props.cards[cardId]));

@@ -17,20 +17,24 @@ class SetSelect extends React.Component {
 
             this.props.handleSetChange(this.state.sets[0].code);
         })
-        
+
     }
 
     render() {
-        return (<div className="dropdown">
-            <label htmlFor="set">Set</label>
-            <select onChange={(e) => this.props.handleSetChange(e.target.value)}  >
-                {this.state.sets.map(e => {
-                    return <option key={e.code} value={e.code}>{e.name}</option>;
-                })}
-            </select>
+        return (<div class="field">
+            <label class="label" htmlFor="set">Set</label>
+            <div className="control">
+                <div class="select is-small">
+                    <select onChange={(e) => this.props.handleSetChange(e.target.value)}  >
+                        {this.state.sets.map(e => {
+                            return <option key={e.code} value={e.code}>{e.name}</option>;
+                        })}
+                    </select>
+                </div>
+            </div>
         </div>);
     }
 
 }
 
-export default SetSelect
+export default SetSelect;
