@@ -103,7 +103,7 @@ footer {
 .whiteboard {
   display: flex;
   flex-direction: column;
-  background-color: #fff9ff;
+  background-color: #fafafa;
 }
 .mtg-column-container {
   display: grid;
