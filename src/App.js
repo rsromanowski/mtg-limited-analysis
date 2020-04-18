@@ -109,11 +109,17 @@ class App extends React.Component {
   handleFilterChange(query) { this.setState({ filter: query }); }
 
   loadCards() {
-    const rarityClause = Object.keys(this.state.rarity).filter((r) => this.state.rarity[r]).map(r => `r:${r}`).join(' OR ');
-    const colors = Object.keys(this.state.color).filter((c) => this.state.color[c]).join('');
-    const additionalFilterClause = (this.state.filter ? this.state.filter + ' ' : '');
+    const rarities = Object.keys(this.state.rarity).filter((r) => this.state.rarity[r]).map(r => `r:${r}`).join(' OR ');
+    const rarityClause = (rarities ? `(${rarities})` : '');
 
-    const endpoint = `https://api.scryfall.com/cards/search?as=grid&order=name&q=${additionalFilterClause}color=${colors} set:${this.state.set} (${rarityClause})`.trim();
+    const colors = Object.keys(this.state.color).filter((c) => this.state.color[c]).join('');
+    const colorClause = (colors ? `color=${colors}` : '');
+    
+    const additionalFilterClause = (this.state.filter ? `(${this.state.filter})` : '');
+    const setClause = `set:${this.state.set}`;
+    const fullQuery = [setClause, colorClause, rarityClause, additionalFilterClause].join(' ');
+
+    const endpoint = `https://api.scryfall.com/cards/search?as=grid&order=set&q=${fullQuery}`;
 
     console.log(endpoint);
     axios.get(endpoint).then((res) => {
