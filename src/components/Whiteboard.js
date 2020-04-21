@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import ColumnContainer from './ColumnContainer'
+import { Droppable } from 'react-beautiful-dnd'
 
 export class Whiteboard extends Component {
     render() {
@@ -7,24 +8,24 @@ export class Whiteboard extends Component {
             <div className="whiteboard shadow-container">
                 <div className="titleBar">
                     <div className="field has-addons">
-                        <p class="control">
-                        <button className="button is-small" type="button">
-                            <span class="icon is-small">
-                                <i class="fas fa-plus"></i>
+                        <p className="control">
+                        <button className="button is-small" type="button" onClick={this.props.addColumn} >
+                            <span className="icon is-small">
+                                <i className="fas fa-plus"></i>
                             </span>
                             <span>Add Column</span>
                         </button>
-                        </p><p class="control">
+                        </p><p className="control">
                         <button className="button is-small" type="button">
-                            <span class="icon is-small">
-                                <i class="fas fa-save"></i>
+                            <span className="icon is-small">
+                                <i className="fas fa-save"></i>
                             </span>
                             <span>Save</span>
                         </button>
-                        </p><p class="control">
+                        </p><p className="control">
                         <button className="button is-small" type="button">
-                            <span class="icon is-small">
-                                <i class="fas fa-share"></i>
+                            <span className="icon is-small">
+                                <i className="fas fa-share"></i>
                             </span>
                             <span>Share</span>
                         </button>

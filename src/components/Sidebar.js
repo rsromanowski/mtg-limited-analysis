@@ -15,7 +15,7 @@ export class Sidebar extends Component {
                     <RaritySelect handleRarityChange={this.props.handleRarityChange} />
                 </div>
                 <AdditionalFilter handleFilterChange={this.props.handleFilterChange} />
-                <button class="button is-info button-load" type="button" onClick={this.props.loadCards}>RELOAD CARDS</button>
+                <button className="button is-info button-load" type="button" onClick={this.props.loadCards}>RELOAD CARDS</button>
             </div>
         )
     }

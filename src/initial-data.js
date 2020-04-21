@@ -39,17 +39,17 @@ const initialData = {
         },
         'column-7' : {
             id: 'column-7',
-            title: 'D',
+            title: 'D+',
             cardIds: []
         },
         'column-8' : {
             id: 'column-8',
-            title: 'D+',
+            title: 'D',
             cardIds: []
         },
         'column-9' : {
             id: 'column-9',
-            title: 'D',
+            title: 'D-',
             cardIds: []
         },
         'column-10' : {

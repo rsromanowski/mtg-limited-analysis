@@ -21,10 +21,10 @@ class SetSelect extends React.Component {
     }
 
     render() {
-        return (<div class="field">
-            <label class="label" htmlFor="set">Set</label>
+        return (<div className="field">
+            <label className="label" htmlFor="set">Set</label>
             <div className="control">
-                <div class="select is-small">
+                <div className="select is-small">
                     <select onChange={(e) => this.props.handleSetChange(e.target.value)}  >
                         {this.state.sets.map(e => {
                             return <option key={e.code} value={e.code}>{e.name}</option>;

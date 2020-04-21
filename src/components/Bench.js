@@ -11,7 +11,7 @@ export class Bench extends Component {
                 <div className="actionBar">
                     <Autosort />
                 </div>
-                <Droppable droppableId="column-0" direction="horizontal">
+                <Droppable droppableId="column-0" type="card" direction="horizontal">
                     {(provided) => (
                         <div className="mtg-row-container" ref={provided.innerRef} {...provided.droppableProps} >
                             {this.props.bench.cardIds.map((cardId, index) => {

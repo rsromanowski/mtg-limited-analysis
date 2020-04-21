@@ -121,7 +121,14 @@ footer {
   border-radius: 2px;
   box-shadow: 0 1px 2px 0 hsla(0, 0%, 0%, 0.2);
   height: auto;
+  padding: 4px;
   /*padding-bottom: 180px; /* equals the margin-bottom on the .column img */
+}
+.mtg-column-header {
+  display: flex;
+}
+.mtg-column-title {
+  flex-grow: 1;
 }
 .mtg-column img {
   margin-bottom: -180px; /* equals the padding-bottom on the .column */

@@ -6,7 +6,7 @@ export class Autosort extends Component {
             <span>
                 <label htmlFor="autosortSelect">
                     <div className="control">
-                        <div class="select is-small">
+                        <div className="select is-small">
                             <select id="autosortSelect">
                                 <option>Sort by...</option>
                                 <option>CMC</option>
